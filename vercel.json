@@ -9,5 +9,11 @@
     { "src": "/public/(.*)", "dest": "/public/$1" },
     { "src": "/views/(.*)", "dest": "/views/$1" },
     { "src": "/(.*)", "dest": "/app.js" }
-  ]
+  ],
+  "build": {
+    "env": {
+      "NPM_FLAGS": "--only=production"
+    },
+    "script": "npm run app"
+  }
 }
