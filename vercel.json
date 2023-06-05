@@ -1,13 +1,20 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "public/**/*", "use": "@vercel/static" },
-    { "src": "views/**/*", "use": "@vercel/static" },
-    { "src": "app.js", "use": "@vercel/node" }
-  ],
   "routes": [
-    { "src": "/public/(.*)", "dest": "/public/$1" },
-    { "src": "/views/(.*)", "dest": "/views/$1" },
-    { "src": "/(.*)", "dest": "/app.js" }
+    {
+      "src": "/views/(.*)",
+      "dest": "views/$1"
+    },
+    {
+      "src": "/public/(.*)",
+      "dest": "public/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "app.js"
+    }
   ]
 }
