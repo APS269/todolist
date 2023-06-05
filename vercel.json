@@ -9,7 +9,5 @@
     { "src": "/public/(.*)", "dest": "/public/$1" },
     { "src": "/views/(.*)", "dest": "/views/$1" },
     { "src": "/(.*)", "dest": "/app.js" }
-  ],
-  "functions": { "app.js": { "runtime": "vercel-node@1.11.0" } },
-  "build": {}
+  ]
 }
