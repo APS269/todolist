@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "routes": [
     {
       "src": "/views/(.*)",
@@ -7,6 +8,16 @@
     {
       "src": "/public/(.*)",
       "dest": "public/$1"
+    },
+    {
+      "src": "/app.js",
+      "dest": "app.js"
+    }
+  ],
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
     }
   ]
 }
