@@ -10,10 +10,6 @@
     { "src": "/views/(.*)", "dest": "/views/$1" },
     { "src": "/(.*)", "dest": "/app.js" }
   ],
-  "build": {
-    "env": {
-      "NPM_FLAGS": "--only=production"
-    },
-    "script": "npm run app"
-  }
+  "functions": { "app.js": { "runtime": "vercel-node@1.11.0" } },
+  "build": {}
 }
